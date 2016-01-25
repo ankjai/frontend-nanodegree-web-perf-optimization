@@ -47,6 +47,14 @@ module.exports = function(grunt) {
                     ext: '.min.css'
                 }]
             }
+        },
+        uglify: {
+            all: {
+                files: {
+                    'dist/js/perfmatters.min.js': ['src/js/perfmatters.js'],
+                    'dist/views/js/main.min.js': ['src/views/js/main.js']
+                }
+            }
         }
     });
 
@@ -67,5 +75,8 @@ module.exports = function(grunt) {
     });
 
     // Register default tasks
-    grunt.registerTask('default', ['cssmin']);
+    grunt.registerTask('default', [
+        'uglify',
+        'cssmin'
+    ]);
 }
