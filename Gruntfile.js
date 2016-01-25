@@ -76,8 +76,11 @@ module.exports = function(grunt) {
                 imageAlpha: true,
                 jpegMini: true
             },
-            all: {
-                src: ['dist/img', 'dist/views/images']
+            img: {
+                src: ['dist/img']
+            },
+            views: {
+                src: ['dist/views/images/pizza.png', 'dist/views/images/pizzeria_360_270.jpg']
             }
         },
         copy: {
