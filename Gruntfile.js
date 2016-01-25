@@ -70,6 +70,35 @@ module.exports = function(grunt) {
                     'dist/views/pizza.html': 'src/views/pizza.html'
                 }
             }
+        },
+        imageoptim: {
+            options: {
+                imageAlpha: true,
+                jpegMini: true
+            },
+            all: {
+                src: ['dist/img', 'dist/views/images']
+            }
+        },
+        copy: {
+            img: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['src/img/*'],
+                    dest: 'dist/img',
+                    filter: 'isFile'
+                }]
+            },
+            views: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    src: ['src/views/images/*'],
+                    dest: 'dist/views/images',
+                    filter: 'isFile'
+                }]
+            }
         }
     });
 
