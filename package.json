@@ -1,0 +1,35 @@
+{
+  "name": "frontend-nanodegree-web-perf-optimization",
+  "version": "1.0.0",
+  "description": "project 4 of fend",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankjai/frontend-nanodegree-web-perf-optimization.git"
+  },
+  "keywords": [
+    "performance",
+    "perf",
+    "optimize"
+  ],
+  "author": "Ankit Jaiswal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankjai/frontend-nanodegree-web-perf-optimization/issues"
+  },
+  "homepage": "https://github.com/ankjai/frontend-nanodegree-web-perf-optimization#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^0.6.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-imageoptim": "^1.4.1",
+    "grunt-pagespeed": "^2.0.0",
+    "load-grunt-tasks": "^3.4.0",
+    "ngrok": "^0.2.2"
+  }
+}
