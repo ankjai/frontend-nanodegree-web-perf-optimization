@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/ankjai/frontend-nanodegree-web-perf-optimization#readme",
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-pagespeed": "^2.0.0",
+    "load-grunt-tasks": "^3.4.0",
+    "ngrok": "^0.2.2"
   }
 }
