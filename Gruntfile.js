@@ -27,6 +27,26 @@ module.exports = function(grunt) {
                     threshold: 90
                 }
             }
+        },
+        cssmin: {
+            index: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/css',
+                    src: ['*.css'],
+                    dest: 'dist/css',
+                    ext: '.min.css'
+                }]
+            },
+            pizza: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/views/css',
+                    src: ['*.css'],
+                    dest: 'dist/views/css',
+                    ext: '.min.css'
+                }]
+            }
         }
     });
 
@@ -47,5 +67,5 @@ module.exports = function(grunt) {
     });
 
     // Register default tasks
-    grunt.registerTask('default');
+    grunt.registerTask('default', ['cssmin']);
 }
