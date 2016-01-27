@@ -536,8 +536,12 @@ function updatePositions() {
     // var items = document.querySelectorAll('.mover');
     var items = document.getElementsByClassName('mover');
 
+    // moving out scrollTop calc. out of the for loop
+    // it needed to be cal only once per updatePositions() call
+    var st = document.body.scrollTop / 1250;
+
     for (var i = 0; i < items.length; i++) {
-        var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+        var phase = Math.sin(st + (i % 5));
         items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     }
 
@@ -558,6 +562,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
     var s = 256;
+    // reduced for loop from 200 to 32 as user
+    // is just seeing max 4 rows of pizza
     for (var i = 0; i < 32; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
