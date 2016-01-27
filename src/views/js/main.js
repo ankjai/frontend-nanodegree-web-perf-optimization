@@ -562,9 +562,16 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
     var s = 256;
-    // reduced for loop from 200 to 32 as user
-    // is just seeing max 4 rows of pizza
-    for (var i = 0; i < 32; i++) {
+
+    // cal no. of rows needed depending upon the screen height
+    var rows = Math.ceil(window.screen.availHeight / s);
+
+    // depending upon the rows and cols, we will cal 'for' loop count
+    var loopCount = rows * cols;
+
+    // reduced for loop from 200 to what ever
+    // user screen is
+    for (var i = 0; i < loopCount; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
