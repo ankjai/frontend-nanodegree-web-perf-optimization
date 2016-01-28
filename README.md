@@ -16,3 +16,14 @@ Using [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmi
 
 ###### Imageoptim
 [grunt-imageoptim](https://www.npmjs.com/package/grunt-imageoptim) app to make images take up less disk space and load faster. Its **ImageAlpha** option/[app](https://pngmini.com/) helps to reduces file sizes of 24-bit PNG files and **JPEGmini** [app](https://itunes.apple.com/us/app/jpegmini/id498944723) for reducing size of JPEG files.
+
+
+#### CRP of index.html
+1. Grunt tasks to minify js, css, html and images.
+2. Commented out googleapi fonts link.
+3. Inline CSS.
+4. Move js script tag end of body.
+
+Pagespeed score:
+Desktop: 93
+Mobile: 96
