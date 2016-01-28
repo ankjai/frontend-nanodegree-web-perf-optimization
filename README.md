@@ -108,3 +108,8 @@ function updatePositions() {
 **After Optimization**
 ![](https://cloud.githubusercontent.com/assets/6732675/12636367/0fed2f2c-c541-11e5-995b-2ccde7faf96a.png)
 
+
+#### Computation Efficiency for pizza.html
+* Time to resize pizza is around 1ms in pizza.html shown in browser console:
+
+![](https://cloud.githubusercontent.com/assets/6732675/12636829/37ce1610-c545-11e5-930e-a1bb44f6dc59.gif)
