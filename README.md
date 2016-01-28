@@ -114,6 +114,26 @@ function updatePositions() {
 
 
 #### Computation Efficiency for pizza.html
-* Time to resize pizza is around 1ms in pizza.html shown in browser console:
+* Pulled out `dx` and `newwidth` out of `for` loop as we need to calculate them only once.
+* Moved out `.querySelectorAll()` out of `for` loop and assign list to `var`.
+```
+function changePizzaSizes(size) {
+        // pull dx and newwidth out of for loop as
+        // we need to cal them only once.
+        var dx = determineDx(document.getElementById("pizza0"), size);
+        var newwidth = (document.getElementById("pizza0").offsetWidth + dx) + 'px';
+
+        // assign querySelectorAll() to var; this way we get elem list only once
+        // querySelectorAll() itself does depth-first pre-order traversal on the document's nodes
+        // so calling querySelectorAll() all the time is expensive
+        var randomPizzaContainerElements = document.querySelectorAll(".randomPizzaContainer");
+
+        for (var i = 0; i < randomPizzaContainerElements.length; i++) {
+            randomPizzaContainerElements[i].style.width = newwidth;
+        }
+    }
+```
+
+**After Optimization** time to resize pizza is around 1ms in pizza.html shown in browser console:
 
 ![](https://cloud.githubusercontent.com/assets/6732675/12636829/37ce1610-c545-11e5-930e-a1bb44f6dc59.gif)
