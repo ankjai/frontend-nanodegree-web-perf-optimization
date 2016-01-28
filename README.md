@@ -101,6 +101,7 @@ function updatePositions() {
 }
 ```
 * Finally using `backface-visibility: hidden` style for mover class to support mobile devices w/ low VRAM.
+
 **Before Optimization**
 ![](https://cloud.githubusercontent.com/assets/6732675/12636368/0fee4df8-c541-11e5-909a-540d1dfd3503.png)
 
