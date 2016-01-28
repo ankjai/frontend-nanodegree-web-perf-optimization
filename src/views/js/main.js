@@ -540,8 +540,18 @@ function updatePositions() {
     // it needed to be cal only once per updatePositions() call
     var st = document.body.scrollTop / 1250;
 
+    // move phase cal outside for loop
+    // as it just has 5 cal to do; no need to run it items.length times 
+    // add lookup table using map datastructure for cal phase
+    // this will reduce Math.sin() cal and improve perf.
+    var phaseMap = new Map();
+
+    for (var k = 0; k < 5; k++) {
+        phaseMap.set(k, Math.sin(st + (k % 5)));
+    }
+
     for (var i = 0; i < items.length; i++) {
-        var phase = Math.sin(st + (i % 5));
+        var phase = phaseMap.get(i % 5);
         items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     }
 
