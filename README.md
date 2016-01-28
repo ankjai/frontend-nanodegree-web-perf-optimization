@@ -31,7 +31,7 @@ Mobile: 96
 
 
 #### Framerate for pizza.html
-1. Reduce for loop count from 200 to only visible pizza images visible on screen. This is achieved by getting user's screen height and Math.ceil().
+* Reduce for loop count from 200 to only visible pizza images visible on screen. This is achieved by getting user's screen height and Math.ceil().
 ```
 document.addEventListener('DOMContentLoaded', function() {
     var cols = 8;
@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePositions();
 });
 ```
-2. Using .getElementsByClassName() instead of .querySelectorAll() because it is much more efficient.
-3. Moving out ```document.body.scrollTop / 1250``` calculation out of for loop because this calculation needs to be done only once in updatePositions().
-4. Creating lookup table for `phase` by using Map() datastructure.
+* Using .getElementsByClassName() instead of .querySelectorAll() because it is much more efficient.
+* Moving out ```document.body.scrollTop / 1250``` calculation out of for loop because this calculation needs to be done only once in updatePositions().
+* Creating lookup table for `phase` by using Map() datastructure.
 ```
 function updatePositions() {
     frame++;
@@ -100,5 +100,10 @@ function updatePositions() {
     }
 }
 ```
-5. Finally using `backface-visibility: hidden` style for mover class to support mobile devices w/ low VRAM.
+* Finally using `backface-visibility: hidden` style for mover class to support mobile devices w/ low VRAM.
+**Before Optimization**
+![](https://cloud.githubusercontent.com/assets/6732675/12636368/0fee4df8-c541-11e5-909a-540d1dfd3503.png)
+
+**After Optimization**
+![](https://cloud.githubusercontent.com/assets/6732675/12636367/0fed2f2c-c541-11e5-995b-2ccde7faf96a.png)
 
