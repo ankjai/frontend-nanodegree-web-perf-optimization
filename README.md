@@ -27,4 +27,4 @@ Using [grunt-contrib-htmlmin](https://www.npmjs.com/package/grunt-contrib-htmlmi
 Pagespeed score:
 Desktop: 93
 Mobile: 96
-(https://cloud.githubusercontent.com/assets/6732675/12636366/0fecd1da-c541-11e5-9b25-fc53f8274790.png)
+![](https://cloud.githubusercontent.com/assets/6732675/12636366/0fecd1da-c541-11e5-9b25-fc53f8274790.png)
